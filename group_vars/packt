@@ -1,0 +1,7 @@
+#any variable come here
+aws_instance_type: "t2.micro"
+aws_key_name: "new_pair"
+aws_region: "us-east-2"
+aws_subnet_id: "subnet-e2abec98"
+aws_image: "ami-0c64dd618a49aeee8"
+

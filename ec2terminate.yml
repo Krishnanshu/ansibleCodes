@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  # remote_user: ec2-user
+  tasks:
+  - name: terminate first ec2 instance
+    ec2:
+      instance_ids: i-0262e578ea758941
+      region: us-east-2
+      image: ami-0c64dd618a49aeee8
+      instance_initiated_shutdown_behavior: terminate
+      wait: true
+  - name: terminate second ec2 instance
+    ec2:
+      instance_ids: i-0f22398bae48d39e2
+      region: us-east-2
+      image: ami-0c64dd618a49aeee8
+      instance_initiated_shutdown_behavior: terminate
+      wait: true

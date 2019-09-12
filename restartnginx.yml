@@ -1,0 +1,12 @@
+---
+- hosts: LINUX_MACHINE
+  become: yes
+  tasks:
+  - name: stop nginx
+    service:
+       name: nginx
+       state: stopped
+  - name: start nginx
+    service:
+       name: nginx
+       state: started

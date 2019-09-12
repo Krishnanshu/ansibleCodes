@@ -1,0 +1,8 @@
+---
+- name: Install Jenkins
+  hosts: LINUX_MACHINE
+  gather_facts: false
+  become: yes
+  tasks:
+  - import_role:
+     name: jenkins

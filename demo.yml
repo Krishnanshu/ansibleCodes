@@ -1,0 +1,14 @@
+---
+- hosts: LINUX_MACHINE
+  become: yes
+  vars_files:
+    - group_vars/packt
+  vars: 
+    application: nginx
+  tasks: 
+    - name: copy ab.txt to host server
+      copy:
+        src: files/ab.txt
+        dest: /home/ab.txt
+
+ 
